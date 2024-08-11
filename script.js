@@ -2,7 +2,7 @@ const selleriesContainer = document.querySelector('.selleries-container');
 
 const selleries = [
   {
-    img: '/img/selleries/136.jpeg',
+    img: '/img/selleries/136.webp',
     alt: 'Sellerie en tissu beige rayé rouge pour 2CV6 Club 1981, avec plage arrière optionnelle',
     model: '2CV6 Club',
     material: 'Tissu',
@@ -10,7 +10,7 @@ const selleries = [
     details: 'Avec plage arrière optionnelle',
   },
   {
-    img: '/img/selleries/140.jpeg',
+    img: '/img/selleries/140.webp',
     alt: 'Sellerie en tissu écossais pour 2CV6 Spécial 1988, avec option sièges avant séparés',
     model: '2CV6 Spécial',
     material: 'Tissu écossais',
@@ -18,7 +18,7 @@ const selleries = [
     details: 'Avec option sièges avant séparés',
   },
   {
-    img: '/img/selleries/127.jpeg',
+    img: '/img/selleries/127.webp',
     alt: 'Sellerie en tissu gris losange pour 2CV6 Charleston 1989',
     model: '2CV6 Charleston',
     material: 'Tissu',
@@ -26,7 +26,7 @@ const selleries = [
     details: 'Losange',
   },
   {
-    img: '/img/selleries/161.jpeg',
+    img: '/img/selleries/161.webp',
     alt: 'Sellerie en Skaï noir perforé pour 2CV6 1971, avec plage arrière optionnelle',
     model: '2CV6',
     material: 'Skaï',
@@ -34,7 +34,7 @@ const selleries = [
     details: 'Avec plage arrière optionnelle',
   },
   {
-    img: '/img/selleries/103.jpeg',
+    img: '/img/selleries/103.webp',
     alt: 'Sellerie en tissu bleu diamanté / Skaï pour AMISUPER break 1974',
     model: 'AMISUPER break',
     material: 'Tissu / Skaï',
@@ -42,7 +42,7 @@ const selleries = [
     details: '',
   },
   {
-    img: '/img/selleries/91.jpeg',
+    img: '/img/selleries/91.webp',
     alt: 'Sellerie à deux banquettes en Skaï rouge rayé blanc pour 2CV6 Spécial 1987',
     model: '2CV6 Spécial',
     material: 'Skaï',
@@ -50,7 +50,7 @@ const selleries = [
     details: '',
   },
   {
-    img: '/img/selleries/85.jpeg',
+    img: '/img/selleries/85.webp',
     alt: 'Sellerie à deux banquettes en tissu rouge chenillé pour AMI6 berline 1963',
     model: 'AMI6 berline',
     material: 'Tissu',
@@ -58,7 +58,7 @@ const selleries = [
     details: 'Chenillé',
   },
   {
-    img: '/img/selleries/34.jpeg',
+    img: '/img/selleries/34.webp',
     alt: 'Sellerie en tissu MOSAÏQUE pour 2CV6 verte 1974',
     model: '2CV6 verte',
     material: 'Tissu',
@@ -66,7 +66,7 @@ const selleries = [
     details: 'Mosaïque',
   },
   {
-    img: '/img/selleries/IMG_4286.jpeg',
+    img: '/img/selleries/IMG_4286.webp',
     alt: 'Sellerie à deux banquettes en tissu Bayadère blanc/vert pour 2CV AZ 1954',
 
     model: '2CV AZ',
@@ -75,7 +75,7 @@ const selleries = [
     details: 'Bayadère',
   },
   {
-    img: '/img/selleries/IMG_3085.jpeg',
+    img: '/img/selleries/IMG_3085.webp',
     alt: 'Sellerie en tissu « Feuille de Houx » avec boutons pour AMI6 berline belge 1967',
     model: 'AMI6 berline belge',
     material: 'Tissu « Feuille de Houx »',
@@ -83,7 +83,7 @@ const selleries = [
     details: 'Avec boutons',
   },
   {
-    img: '/img/selleries/IMG_0895.jpeg',
+    img: '/img/selleries/IMG_0895.webp',
     alt: 'Sellerie en tissu orange rayé noir pour 2CV6 1979',
     model: '2CV6',
     material: 'Tissu',
