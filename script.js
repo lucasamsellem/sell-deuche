@@ -95,16 +95,18 @@ const selleries = [
 selleries.forEach(
   (el) =>
     (selleriesContainer.innerHTML += `
-    <ul class="sellerie">
-      <li class="sellerie-img-container">
-          <img src='${el.img}' alt='${el.alt}'/>
-      </li>
-      <div class="specs">
+  <ul class="sellerie">
+    <li class="sellerie-item">
+      <figure class="sellerie-img-container">
+        <img src="${el.img}" alt="${el.alt}" />
+      </figure>
+      <ul class="specs">
         <li>Matière : <strong>${el.material}</strong></li>
         <li>Modèle : <strong>${el.model}</strong></li>
         <li>Année : <strong>${el.year}</strong></li>
         <li><i>${el.details}</i></li>
-       </div>
-    </ul>
+      </ul>
+    </li>
+  </ul>
     `)
 );
