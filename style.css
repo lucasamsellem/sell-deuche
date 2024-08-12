@@ -214,6 +214,7 @@ footer {
 
 /* MODAL */
 .modal {
+  position: relative;
   z-index: 9999;
   top: 50%;
   left: 50%;
@@ -233,7 +234,17 @@ footer {
 }
 
 .modal-content {
-  padding: 1em;
+  padding: 3rem;
+}
+
+.modal-close-btn {
+  position: absolute;
+  z-index: 1000;
+  font-size: 3rem;
+  /* color: white; */
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */

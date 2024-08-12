@@ -120,6 +120,7 @@ const selleriesImgs = document.querySelectorAll('.sellerie-img-container');
 
 const imgModal = document.querySelector('.modal');
 const imgModalContent = document.querySelector('.modal-content');
+const modalCloseBtn = document.querySelector('.modal-close-btn');
 
 // Full size img on click
 selleriesImgs.forEach((img) => {
@@ -131,6 +132,7 @@ selleriesImgs.forEach((img) => {
     const imgElement = document.createElement('img');
     imgElement.src = e.target.src;
     imgElement.style.width = '100%';
+    imgElement.style.borderRadius = '5px';
 
     // Append the new image to the modal content
     imgModalContent.appendChild(imgElement);
@@ -138,6 +140,10 @@ selleriesImgs.forEach((img) => {
     // Show the modal
     imgModal.showModal();
   });
+});
+
+modalCloseBtn.addEventListener('click', () => {
+  imgModal.close();
 });
 
 // CLOSE DIALOG WHEN CLICKING OUTSIDE MODAL
