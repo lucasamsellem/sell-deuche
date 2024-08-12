@@ -71,11 +71,11 @@ nav ul li:hover {
 }
 
 /* Specific Section Styles */
+
 .selleries-container {
   display: flex;
-  gap: 1.6rem;
   overflow-x: scroll;
-  overflow-y: hidden;
+  gap: 1.6rem;
   padding: 2rem 0;
 }
 
@@ -91,15 +91,14 @@ section h2 {
   font-size: 1.6rem;
   font-weight: 500;
   border-radius: 5px;
-}
-
-.sellerie h4 {
-  font-size: 2rem;
-  text-align: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.139);
+  height: fit-content;
 }
 
 .sellerie-img-container {
   height: 35rem;
+
+  cursor: pointer;
 }
 
 .selleries-container img {
@@ -111,11 +110,11 @@ section h2 {
 .sellerie .specs {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   background-color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  text-align: center;
   padding: 1.6rem;
 }
 
@@ -212,6 +211,32 @@ footer {
 .assets li:last-child {
   border: none;
 }
+
+/* MODAL */
+.modal {
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: none;
+  border-radius: 5px;
+
+  width: 60vw;
+
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.095);
+
+  position: fixed;
+}
+
+.modal:focus-visible {
+  outline: none;
+}
+
+.modal-content {
+  padding: 1em;
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 56.25em) {
   /* max-width: 900px */

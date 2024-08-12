@@ -92,21 +92,55 @@ const selleries = [
   },
 ];
 
-selleries.forEach(
-  (el) =>
-    (selleriesContainer.innerHTML += `
-  <ul class="sellerie">
-    <li class="sellerie-item">
-      <figure class="sellerie-img-container">
-        <img src="${el.img}" alt="${el.alt}" />
-      </figure>
-      <ul class="specs">
-        <li>Matière : <strong>${el.material}</strong></li>
-        <li>Modèle : <strong>${el.model}</strong></li>
-        <li>Année : <strong>${el.year}</strong></li>
-        <li><i>${el.details}</i></li>
-      </ul>
-    </li>
-  </ul>
-    `)
-);
+// Render selleries into the slider
+function renderSelleries() {
+  selleriesContainer.innerHTML = selleries
+    .map(
+      (el) => `
+    <ul class="sellerie">
+      <li class="sellerie-item">
+        <figure class="sellerie-img-container">
+          <img src="${el.img}" alt="${el.alt}" />
+        </figure>
+        <ul class="specs">
+          <li>Matière : <strong>${el.material}</strong></li>
+          <li>Modèle : <strong>${el.model}</strong></li>
+          <li>Année : <strong>${el.year}</strong></li>
+          <li><i>${el.details}</i></li>
+        </ul>
+      </li>
+    </ul>
+    `
+    )
+    .join('');
+}
+renderSelleries();
+
+const selleriesImgs = document.querySelectorAll('.sellerie-img-container');
+
+const imgModal = document.querySelector('.modal');
+const imgModalContent = document.querySelector('.modal-content');
+
+// Full size img on click
+selleriesImgs.forEach((img) => {
+  img.addEventListener('click', (e) => {
+    // Clear any previous content in the modal
+    imgModalContent.innerHTML = '';
+
+    // Create img element
+    const imgElement = document.createElement('img');
+    imgElement.src = e.target.src;
+    imgElement.style.width = '100%';
+
+    // Append the new image to the modal content
+    imgModalContent.appendChild(imgElement);
+
+    // Show the modal
+    imgModal.showModal();
+  });
+});
+
+// CLOSE DIALOG WHEN CLICKING OUTSIDE MODAL
+window.addEventListener('click', (e) => {
+  if (e.target === imgModal) imgModal.close();
+});
