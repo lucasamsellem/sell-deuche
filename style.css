@@ -98,7 +98,7 @@ section h2 {
 .sellerie-img-container {
   height: 35rem;
 
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .selleries-container img {
@@ -213,9 +213,8 @@ footer {
 }
 
 /* MODAL */
-.modal {
-  position: relative;
-  z-index: 9999;
+/* .modal {
+  z-index: 999;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -234,18 +233,19 @@ footer {
 }
 
 .modal-content {
-  padding: 3rem;
+  position: relative;
+  padding: 1em;
 }
 
 .modal-close-btn {
+  z-index: 1001;
   position: absolute;
-  z-index: 1000;
   font-size: 3rem;
-  /* color: white; */
-  top: 2px;
-  right: 2px;
+  /* color: white; 
+  top: -12px;
+  right: -12px;
   cursor: pointer;
-}
+} */
 
 /* RESPONSIVE */
 

@@ -116,37 +116,37 @@ function renderSelleries() {
 }
 renderSelleries();
 
-const selleriesImgs = document.querySelectorAll('.sellerie-img-container');
+// const selleriesImgs = document.querySelectorAll('.sellerie-img-container');
 
-const imgModal = document.querySelector('.modal');
-const imgModalContent = document.querySelector('.modal-content');
-const modalCloseBtn = document.querySelector('.modal-close-btn');
+// const imgModal = document.querySelector('.modal');
+// const imgModalContent = document.querySelector('.modal-content');
+// const modalCloseBtn = document.querySelector('.modal-close-btn');
 
-// Full size img on click
-selleriesImgs.forEach((img) => {
-  img.addEventListener('click', (e) => {
-    // Clear any previous content in the modal
-    imgModalContent.innerHTML = '';
+// // Full size img on click
+// selleriesImgs.forEach((img) => {
+//   img.addEventListener('click', (e) => {
+//     // Clear any previous content in the modal
+//     imgModalContent.innerHTML = '';
 
-    // Create img element
-    const imgElement = document.createElement('img');
-    imgElement.src = e.target.src;
-    imgElement.style.width = '100%';
-    imgElement.style.borderRadius = '5px';
+//     // Create img element
+//     const imgElement = document.createElement('img');
+//     imgElement.src = e.target.src;
+//     imgElement.style.width = '100%';
+//     imgElement.style.borderRadius = '5px';
 
-    // Append the new image to the modal content
-    imgModalContent.appendChild(imgElement);
+//     // Append the new image to the modal content
+//     imgModalContent.appendChild(imgElement);
 
-    // Show the modal
-    imgModal.showModal();
-  });
-});
+//     // Show the modal
+//     imgModal.showModal();
+//   });
+// });
 
-modalCloseBtn.addEventListener('click', () => {
-  imgModal.close();
-});
+// modalCloseBtn.addEventListener('click', () => {
+//   imgModal.close();
+// });
 
-// CLOSE DIALOG WHEN CLICKING OUTSIDE MODAL
-window.addEventListener('click', (e) => {
-  if (e.target === imgModal) imgModal.close();
-});
+// // CLOSE DIALOG WHEN CLICKING OUTSIDE MODAL
+// window.addEventListener('click', (e) => {
+//   if (e.target === imgModal) imgModal.close();
+// });
