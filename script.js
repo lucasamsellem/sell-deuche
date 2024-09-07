@@ -1,5 +1,9 @@
 const selleriesContainer = document.querySelector('.selleries-container');
 
+const availableSelleriesContainer = document.querySelector(
+  '.available-selleries-container'
+);
+
 const selleries = [
   {
     img: '/img/selleries/136.webp',
@@ -92,65 +96,75 @@ const selleries = [
   },
 ];
 
-function formatFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+const availableSelleries = [
+  {
+    img: '/img/selleries-dispo/Skaï perforé anthracite.jpeg',
+    alt: 'Skaï perforé anthracite',
+    model: '2CV4/6',
+    material: 'Skaï perforé anthracite',
+    year: '1968/1972',
+    details: 'Avec plage arrière optionnelle',
+  },
+  {
+    img: '/img/selleries-dispo/Skaï Jean’s délavé.jpeg',
+    alt: 'Sellerie en tissu écossais pour 2CV6 Spécial 1988, avec option sièges avant séparés',
+    model: ' 2CV6 Spécial et COCORICO',
+    material: 'Skaï Jean’s délavé',
+    year: '1986/1990',
+    details: '',
+  },
+  {
+    img: '/img/selleries-dispo/Skaï lisse noir.jpeg',
+    alt: 'Sellerie en tissu gris losange pour 2CV6 Charleston 1989',
+    model: '2CV6 et DYANE',
+    material: 'Skaï lisse noir',
+    year: '1978/1982',
+    details: 'Avec plage arrière optionnelle',
+  },
+  {
+    img: '/img/selleries-dispo/tissu bleu rayé.jpeg',
+    alt: 'AMI8 berline Confort',
+    model: '2CV4/6 et DYANE',
+    material: 'tissu bleu rayé',
+    year: '1978/1984',
+    details: '',
+  },
+  {
+    img: '/img/selleries-dispo/tissu velours CHENILLÉ rouge.jpeg',
+    alt: 'AMI8 berline Confort',
+    model: 'AMI6 berline et break',
+    material: 'tissu velours CHENILLÉ rouge',
+    year: '1961/1968',
+    details: '',
+  },
+];
 
-// Render selleries into the slider
-function renderSelleries() {
-  selleriesContainer.innerHTML = selleries
+// Capitalize the first letter of a string
+const formatFirstLetter = (string) =>
+  string.charAt(0).toUpperCase() + string.slice(1);
+
+// Reusable function to render selleries
+function renderSelleries(selleriesList, container) {
+  container.innerHTML = selleriesList
     .map(
-      (el) => `
-    <ul class="sellerie">
-      <li class="sellerie-item">
-        <figure class="sellerie-img-container">
-          <img src="${el.img}" alt="${el.alt}" />
-        </figure>
-        <ul class="specs">
-          <li>Matière : <strong>${formatFirstLetter(el.material)}</strong></li>
-          <li>Modèle : <strong>${formatFirstLetter(el.model)}</strong></li>
-          <li>Année : <strong>${el.year}</strong></li>
-          <li><i>${formatFirstLetter(el.details)}</i></li>
-        </ul>
-      </li>
-    </ul>
-    `
+      ({ img, alt, material, model, year, details }) => `
+      <ul class="sellerie">
+        <li class="sellerie-item">
+          <figure class="sellerie-img-container">
+            <img src="${img}" alt="${alt}" />
+          </figure>
+          <ul class="specs">
+            <li>Matière : <strong>${formatFirstLetter(material)}</strong></li>
+            <li>Modèle : <strong>${formatFirstLetter(model)}</strong></li>
+            <li>Année : <strong>${year}</strong></li>
+            <li><i>${details ? formatFirstLetter(details) : ''}</i></li>
+          </ul>
+        </li>
+      </ul>`
     )
     .join('');
 }
-renderSelleries();
 
-// const selleriesImgs = document.querySelectorAll('.sellerie-img-container');
-
-// const imgModal = document.querySelector('.modal');
-// const imgModalContent = document.querySelector('.modal-content');
-// const modalCloseBtn = document.querySelector('.modal-close-btn');
-
-// // Full size img on click
-// selleriesImgs.forEach((img) => {
-//   img.addEventListener('click', (e) => {
-//     // Clear any previous content in the modal
-//     imgModalContent.innerHTML = '';
-
-//     // Create img element
-//     const imgElement = document.createElement('img');
-//     imgElement.src = e.target.src;
-//     imgElement.style.width = '100%';
-//     imgElement.style.borderRadius = '5px';
-
-//     // Append the new image to the modal content
-//     imgModalContent.appendChild(imgElement);
-
-//     // Show the modal
-//     imgModal.showModal();
-//   });
-// });
-
-// modalCloseBtn.addEventListener('click', () => {
-//   imgModal.close();
-// });
-
-// // CLOSE DIALOG WHEN CLICKING OUTSIDE MODAL
-// window.addEventListener('click', (e) => {
-//   if (e.target === imgModal) imgModal.close();
-// });
+// Render both selleries and available selleries
+renderSelleries(selleries, selleriesContainer);
+renderSelleries(availableSelleries, availableSelleriesContainer);

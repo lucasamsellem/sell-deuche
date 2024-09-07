@@ -70,11 +70,24 @@ nav ul li:hover {
 
 /* Specific Section Styles */
 
-.selleries-container {
+.selleries-container,
+.available-selleries-container {
   display: flex;
   overflow-x: scroll;
   gap: 1.6rem;
   padding: 2rem 0;
+}
+
+.available-selleries-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.available-selleries-header h5 {
+  font-weight: 500;
+  font-style: italic;
 }
 
 section h2 {
@@ -99,13 +112,14 @@ section h2 {
   /* cursor: pointer; */
 }
 
-.selleries-container img {
+.selleries-container img,
+.available-selleries-container img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 100%;
 }
 
-.sellerie .specs {
+.specs {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,41 +228,6 @@ footer {
 .assets li:last-child {
   border: none;
 }
-
-/* MODAL */
-/* .modal {
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  border: none;
-  border-radius: 5px;
-
-  width: 60vw;
-
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.095);
-
-  position: fixed;
-}
-
-.modal:focus-visible {
-  outline: none;
-}
-
-.modal-content {
-  position: relative;
-  padding: 1em;
-}
-
-.modal-close-btn {
-  z-index: 1001;
-  position: absolute;
-  font-size: 3rem;
-  /* color: white; 
-  top: -12px;
-  right: -12px;
-  cursor: pointer;
-} */
 
 /* RESPONSIVE */
 
