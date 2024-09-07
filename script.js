@@ -26,12 +26,12 @@ const selleries = [
     details: 'Losange',
   },
   {
-    img: '/img/selleries/161.webp',
-    alt: 'Sellerie en Skaï noir perforé pour 2CV6 1971, avec plage arrière optionnelle',
-    model: '2CV6',
-    material: 'Skaï',
-    year: 1971,
-    details: 'Avec plage arrière optionnelle',
+    img: '/img/selleries/image3.jpeg',
+    alt: 'AMI8 berline Confort',
+    model: 'AMI8 berline Confort',
+    material: 'Tissu velours bleu',
+    year: '1969/1973',
+    details: '',
   },
   {
     img: '/img/selleries/103.webp',
@@ -50,11 +50,11 @@ const selleries = [
     details: '',
   },
   {
-    img: '/img/selleries/85.webp',
-    alt: 'Sellerie à deux banquettes en tissu rouge chenillé pour AMI6 berline 1963',
-    model: 'AMI6 berline',
-    material: 'Tissu',
-    year: 1963,
+    img: '/img/selleries/image4.jpeg',
+    alt: 'AMI8 berline / break CLUB de 1969 / 1973',
+    model: 'AMI8 berline / break CLUB',
+    material: 'Skaï / tissu rouge diamanté',
+    year: '1969 / 1973',
     details: 'Chenillé',
   },
   {
@@ -92,6 +92,10 @@ const selleries = [
   },
 ];
 
+function formatFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 // Render selleries into the slider
 function renderSelleries() {
   selleriesContainer.innerHTML = selleries
@@ -103,10 +107,10 @@ function renderSelleries() {
           <img src="${el.img}" alt="${el.alt}" />
         </figure>
         <ul class="specs">
-          <li>Matière : <strong>${el.material}</strong></li>
-          <li>Modèle : <strong>${el.model}</strong></li>
+          <li>Matière : <strong>${formatFirstLetter(el.material)}</strong></li>
+          <li>Modèle : <strong>${formatFirstLetter(el.model)}</strong></li>
           <li>Année : <strong>${el.year}</strong></li>
-          <li><i>${el.details}</i></li>
+          <li><i>${formatFirstLetter(el.details)}</i></li>
         </ul>
       </li>
     </ul>
