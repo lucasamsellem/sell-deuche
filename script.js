@@ -54,12 +54,12 @@ const selleries = [
     details: '',
   },
   {
-    img: '/img/selleries/image4.jpeg',
+    img: '/img/selleries/AMI8 rouge.jpeg',
     alt: 'Sellerie en Skaï et tissu rouge diamanté pour AMI8 berline / break CLUB de 1969 à 1973',
     model: 'AMI8 berline / break CLUB',
     material: 'Skaï / tissu rouge diamanté',
     year: '1969 / 1973',
-    details: 'Chenillé',
+    details: '',
   },
   {
     img: '/img/selleries/34.webp',

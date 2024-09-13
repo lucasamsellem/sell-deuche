@@ -31,6 +31,10 @@ body {
   color: var(--light-dark);
 }
 
+.header-margin {
+  margin-bottom: 16rem;
+}
+
 /* Layout Styles */
 header {
   display: flex;
@@ -38,6 +42,11 @@ header {
   padding: 1rem 5rem;
   background-color: var(--brown);
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 main {
@@ -48,11 +57,17 @@ main {
 
 section {
   margin: 8.6rem 0;
+  scroll-margin-top: 15rem;
 }
 
+.logo-container {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
 .logo {
-  height: 8rem;
-  filter: invert(100%);
+  max-height: 7rem;
+  /* filter: invert(100%); */
 }
 
 nav ul {
@@ -62,10 +77,12 @@ nav ul {
   color: white;
   font-weight: 600;
 }
+nav ul li {
+  transition: all 0.2s;
+}
 
-nav ul li:hover {
-  text-decoration: underline;
-  text-underline-offset: 10px;
+nav ul li:active {
+  opacity: 0.5;
 }
 
 /* Specific Section Styles */
@@ -103,7 +120,6 @@ section h2 {
   font-weight: 500;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.139);
-  height: fit-content;
 }
 
 .sellerie-img-container {
@@ -123,6 +139,9 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 14rem;
   gap: 1rem;
   background-color: white;
   border-bottom-left-radius: 5px;
@@ -209,7 +228,7 @@ footer {
 
   transition: all 0.2s;
 }
-.social-medias ion-icon:hover {
+.social-medias ion-icon:active {
   opacity: 0.7;
 }
 
@@ -253,12 +272,16 @@ footer {
   header {
     flex-direction: column;
     gap: 2.4rem;
+    padding: 1rem 3rem;
+  }
+  section h2 {
+    margin-bottom: 2.4rem;
   }
   nav ul {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .logo {
-    height: 7rem;
+    height: 5rem;
   }
   .sellerie {
     font-size: 1.4rem;
