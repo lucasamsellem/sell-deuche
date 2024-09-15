@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,8 +21,7 @@ ul {
   list-style: none;
 }
 
-a:link,
-a:visited {
+a {
   color: white;
   text-decoration: none;
 }
@@ -39,9 +39,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 5rem;
   background-color: var(--brown);
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -65,28 +65,38 @@ section {
   padding: 0.5rem;
   border-radius: 10px;
 }
+
 .logo {
   max-height: 7rem;
-  /* filter: invert(100%); */
 }
 
+/* Navigation */
 nav ul {
   display: flex;
-  font-size: 2rem;
   gap: 3.6rem;
-  color: white;
+  font-size: 2rem;
   font-weight: 600;
+  color: white;
 }
+
 nav ul li {
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 }
 
 nav ul li:active {
   opacity: 0.5;
 }
 
-/* Specific Section Styles */
+/* Section Headers */
+section h2 {
+  font-size: 3.4rem;
+  padding-bottom: 1rem;
+  margin-bottom: 4.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.177);
+  text-align: center;
+}
 
+/* Selleries */
 .selleries-container,
 .available-selleries-container {
   display: flex;
@@ -96,11 +106,10 @@ nav ul li:active {
   overflow-x: scroll;
 }
 
-/* SLIDER */
 .slider {
   display: flex;
   gap: 2.4rem;
-  transition: all 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .available-selleries-header {
@@ -113,14 +122,6 @@ nav ul li:active {
 .available-selleries-header h5 {
   font-weight: 500;
   font-style: italic;
-}
-
-section h2 {
-  font-size: 3.4rem;
-  padding-bottom: 1rem;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.177);
-  text-align: center;
-  margin-bottom: 4.8rem;
 }
 
 .sellerie {
@@ -136,8 +137,7 @@ section h2 {
 
 .selleries-container img,
 .available-selleries-container img {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px 5px 0 0;
   height: 100%;
 }
 
@@ -145,14 +145,13 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  height: 14rem;
+  text-align: center;
   gap: 1rem;
-  background-color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  height: 14rem;
   padding: 1.6rem;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
 }
 
 .sellerie li i {
@@ -160,6 +159,7 @@ section h2 {
   color: #555555c3;
 }
 
+/* About Section */
 .about-section article {
   font-size: 1.6rem;
   line-height: 1.7;
@@ -172,19 +172,22 @@ section h2 {
   text-justify: inter-word;
 }
 
+/* Contact Section */
 .contact-section address {
   text-align: center;
 }
 
 .contact-section ion-icon {
   font-size: 6rem;
-  color: #333;
-  transition: all 0.2s;
+  color: var(--light-dark);
+  transition: transform 0.2s ease;
 }
+
 .contact-section ion-icon:active {
   transform: scale(0.9);
 }
 
+/* Footer */
 footer {
   display: grid;
   gap: 3.4rem;
@@ -195,10 +198,10 @@ footer {
 }
 
 .card-title {
-  grid-column: -1 / 1;
+  grid-column: 1 / -1;
   text-align: center;
-  border-bottom: white solid 1px;
   padding-bottom: 2rem;
+  border-bottom: 1px solid white;
 }
 
 .card-title h3 {
@@ -222,8 +225,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
   gap: 0.8rem;
+  font-size: 1.4rem;
 }
 
 .location ion-icon {
@@ -237,8 +240,9 @@ footer {
 
 .social-medias ion-icon {
   font-size: 5rem;
-  transition: all 0.2s;
+  transition: transform 0.2s ease;
 }
+
 .social-medias ion-icon:active {
   transform: scale(0.9);
 }
@@ -246,28 +250,32 @@ footer {
 .assets {
   display: flex;
   justify-content: center;
-  font-size: 1.4rem;
   gap: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .assets li {
-  border-right: 1px white solid;
   padding-right: 1rem;
+  border-right: 1px solid white;
 }
 
 .assets li:last-child {
-  border: none;
+  border-right: none;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 56.25em) {
-  /* max-width: 900px */
+/* Responsiveness */
+@media (max-width: 900px) {
   .sellerie-img-container {
     height: 25rem;
   }
   main {
     padding: 0 2rem;
+  }
+  nav ul {
+    font-size: 1.5rem;
+  }
+  .logo {
+    height: 6rem;
   }
   section h2 {
     font-size: 3rem;
@@ -280,16 +288,15 @@ footer {
   }
 }
 
-@media (max-width: 37.5em) {
-  /* max-width: 600px */
+@media (max-width: 600px) {
   header {
     flex-direction: column;
     gap: 2.4rem;
     padding: 1rem 2rem;
   }
   section h2 {
-    margin-bottom: 2.4rem;
     font-size: 2.6rem;
+    margin-bottom: 2.4rem;
   }
   nav ul {
     font-size: 1.3rem;
@@ -333,6 +340,6 @@ footer {
     align-items: center;
   }
   .assets li {
-    border: none;
+    border-right: none;
   }
 }
