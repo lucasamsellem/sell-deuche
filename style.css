@@ -161,7 +161,7 @@ section h2 {
 
 /* About Section */
 .about-section article {
-  font-size: 1.6rem;
+  font-size: clamp(0.8rem, 2vw, 1.6rem);
   line-height: 1.7;
   font-weight: 500;
 }
