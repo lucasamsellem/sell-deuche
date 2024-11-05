@@ -1,12 +1,3 @@
-// SLIDER
-// const slider = document.querySelector('.slider');
-// const visibleItems = 1;
-// const computedStyle = window.getComputedStyle(slider);
-// const sliderGap = Number(computedStyle.getPropertyValue('gap').slice(0, 2));
-// const nextBtn = document.querySelector('.next-btn');
-// const prevBtn = document.querySelector('.prev-btn');
-
-// SELLERIES
 const selleriesContainer = document.querySelector('.selleries-container');
 const availableSelleriesContainer = document.querySelector(
   '.available-selleries-container'
@@ -113,18 +104,17 @@ const availableSelleries = [
     details: 'Avec plage arrière optionnelle',
   },
   {
-    img: '/img/selleries-dispo/tissu rayé marron.jpeg',
-    alt: 'Sellerie en tissu rayé marron pour 2CV4/6 de 1978 à 1984',
-    model: '2CV4/6',
-    material: 'tissu rayé marron',
+    img: '/img/selleries-dispo/Tissu bleu rayé 2CV46 DYANE.jpeg',
+    alt: 'Sellerie en tissu bleu rayé pour modèles 2CV4/6 et DYANE de 1978 à 1984',
+    model: '2CV4/6 + DYANE',
+    material: 'Tissu bleu rayé',
     year: '1978/1984',
     details: '',
   },
 ];
 
 // Capitalize the first letter of a string
-const formatFirstLetter = (string) =>
-  string.charAt(0).toUpperCase() + string.slice(1);
+const formatFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 // Reusable function to render selleries
 function renderSelleries(selleriesList, container) {
@@ -150,41 +140,3 @@ function renderSelleries(selleriesList, container) {
 
 renderSelleries(selleries, selleriesContainer);
 renderSelleries(availableSelleries, availableSelleriesContainer);
-
-// // Define sellerie item width dynamically
-// let sellerieItemWidth;
-// const sellerieItem = document.querySelector('.sellerie-item');
-
-// const resizeObserver = new ResizeObserver(() => {
-//   sellerieItemWidth = sellerieItem.clientWidth;
-
-//   selleriesContainer.style.width = `${
-//     (sellerieItemWidth + sliderGap / visibleItems) * visibleItems
-//   }px`;
-// });
-// resizeObserver.observe(sellerieItem);
-
-// // SLIDER
-// let currentIndex = 0;
-
-// function translateX() {
-//   slider.style.transform = `translateX(-${
-//     currentIndex * ((sellerieItemWidth + sliderGap) * visibleItems)
-//   }px)`;
-// }
-
-// nextBtn.addEventListener('click', () => {
-//   currentIndex++;
-//   if (currentIndex >= slider.children.length / visibleItems) {
-//     currentIndex = 0;
-//   }
-//   translateX();
-// });
-
-// prevBtn.addEventListener('click', () => {
-//   currentIndex--;
-//   if (currentIndex < 0) {
-//     currentIndex = slider.children.length / visibleItems - 1;
-//   }
-//   translateX();
-// });
