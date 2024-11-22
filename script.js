@@ -98,7 +98,7 @@ const selleriesRowTwo = [
     details: '',
   },
   {
-    img: '/img/selleries/tissu Jersey vénitien orange Skaï.jpeg',
+    img: '/img/selleries/tissu Jersey vénitien orange Skaï.webp',
     alt: 'Sellerie en tissu Jersey vénitien orange pour série limitée 2CV « SPOT »',
     model: 'série limitée 2CV « SPOT »',
     material: 'tissu Jersey vénitien orange / Skaï',
@@ -106,7 +106,7 @@ const selleriesRowTwo = [
     details: '',
   },
   {
-    img: '/img/selleries/Skaï lisse bleu rayé blanc.jpeg',
+    img: '/img/selleries/Skaï lisse bleu rayé blanc.webp',
     alt: 'Sellerie en Skaï lisse bleu rayé blanc pour modèle 2CV bleu Myosotis de 1976',
     model: '2CV bleu Myosotis',
     material: 'Skaï lisse bleu rayé blanc',
