@@ -103,6 +103,11 @@ section h2 {
   margin: 0 auto;
   padding: 2rem 0;
   overflow-x: scroll;
+  scrollbar-width: thin;
+}
+
+.selleries-list:hover {
+  overflow-x: scroll;
 }
 
 .sellerie-item {
