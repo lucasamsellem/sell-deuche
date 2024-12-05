@@ -208,3 +208,49 @@ function renderSelleries(selleriesList, container) {
 selleriesListContainers.forEach((list, i) =>
   renderSelleries(selleriesData[i], list)
 );
+
+// Carousel
+// document.querySelectorAll('.carousel-wrapper').forEach((wrapper) => {
+//   const list = wrapper.querySelector('.selleries-list'); // The <ul> element
+//   const items = Array.from(list.querySelectorAll('li')); // Convert NodeList to an array
+//   const prevBtn = wrapper.querySelector('.prev-btn');
+//   const nextBtn = wrapper.querySelector('.next-btn');
+
+//   let currentIndex = 0; // Tracks the currently visible item
+
+//   // Set up an Intersection Observer
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           currentIndex = items.indexOf(entry.target); // Update the current index dynamically
+//         }
+//       });
+//     },
+//     { root: wrapper, threshold: 0.5 } // Observes elements when 50% or more are visible
+//   );
+
+//   // Observe each <li>
+//   items.forEach((item) => observer.observe(item));
+
+//   // Handle navigation
+//   prevBtn.addEventListener('click', () => {
+//     currentIndex = (currentIndex - 1 + items.length) % items.length;
+//     scrollToCurrentItem();
+//   });
+
+//   nextBtn.addEventListener('click', () => {
+//     currentIndex = (currentIndex + 1) % items.length;
+//     scrollToCurrentItem();
+//   });
+
+//   // Scroll to the current item
+//   function scrollToCurrentItem() {
+//     const translateX = -currentIndex * window.innerWidth; // Calculate viewport width
+//     list.style.transform = `translateX(${translateX}px)`;
+//     list.style.transition = `transform 0.3s ease`; // Smooth scrolling
+//   }
+
+//   // Adjust the <ul>'s width dynamically
+//   list.style.width = `${items.length * 100}vw`; // Each item takes 100% of the viewport
+// });

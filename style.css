@@ -97,17 +97,44 @@ section h2 {
 }
 
 /* Selleries */
+/* .carousel-wrapper {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  position: relative;
+} */
+
+/* .carousel-btn {
+  display: flex;
+  position: absolute;
+  font-size: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 5px;
+  z-index: 10;
+  opacity: 0.9;
+} */
+
+/* .prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+} */
+
 .selleries-list {
   display: flex;
   gap: 2.4rem;
   margin: 0 auto;
   padding: 2rem 0;
   overflow-x: scroll;
-  scrollbar-width: thin;
-}
-
-.selleries-list::-webkit-scrollbar {
-  overflow-x: scroll;
+  /* scrollbar-width: thin; */
 }
 
 .sellerie-item {
