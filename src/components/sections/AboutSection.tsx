@@ -1,4 +1,3 @@
-import { IonIcon } from '@ionic/react';
 import Section from '../html-tags/Section';
 import { renovatedUpholsteries } from '@/data/upholsteriesData';
 import RenovatedUpholsteryImg from '../upholsteries/RenovatedUpholsteryImg';
@@ -60,15 +59,14 @@ function AboutSection() {
 
       <Subsection>
         <SubsectionTitle>Restauration</SubsectionTitle>
-        <Carousel className='lg:w-full rounded-4xl p-4 mx-auto border-1 border-black'>
+        <Carousel className='w-full rounded-4xl p-4 mx-auto border-1 border-black/30'>
           <h3 className='lg:text-xl text-md text-center font-bold mb-5'>
             Avant / après
           </h3>
           <CarouselContent>
             {renovatedUpholsteries.map((item, i) => (
-              <CarouselItem className='flex items-center justify-center gap-x-3'>
+              <CarouselItem className='lg:max-h-[24rem] max-h-[16rem] flex items-center justify-center gap-x-3'>
                 <RenovatedUpholsteryImg condition={item.before} i={i} />
-                <IonIcon className='text-2xl' icon='arrow-forward-outline' />
                 <RenovatedUpholsteryImg condition={item.after} i={i} />
               </CarouselItem>
             ))}
