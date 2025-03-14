@@ -13,7 +13,7 @@ function Navbar() {
         alt='Logo Sell Deuche'
         className='bg-white p-1 rounded-lg lg:w-[8rem] w-[6rem]'
       />
-      <nav className='hidden md:flex'>
+      <nav className='hidden md:flex '>
         <ul className='flex gap-8'>
           <NavbarLink link='gallery'>Galerie</NavbarLink>
           <NavbarLink link='available-upholsteries'>Selleries</NavbarLink>
@@ -28,8 +28,8 @@ function Navbar() {
           ☰
         </button>
         {isMobileMenuOpen && (
-          <div className='absolute top-16 right-0 bg-amber-800 w-full p-4'>
-            <ul className='flex items-center gap-4'>
+          <div className='absolute top-18 right-0 bg-amber-800 w-full p-4'>
+            <ul className='flex items-center justify-center gap-4'>
               <NavbarLink link='gallery' toggleMenu={toggleMenu}>
                 Galerie
               </NavbarLink>

@@ -126,20 +126,10 @@ export const availableUpholsteries: Upholstery[] = [
   },
 ];
 
-export const renovatedUpholsteries = [
-  {
-    before: 'before',
-    after: 'after',
-  },
-  {
-    before: 'before',
-    after: 'after',
-  },
-  {
-    before: 'before',
-    after: 'after',
-  },
-];
+export const renovatedUpholsteries = Array.from({ length: 4 }, () => ({
+  before: 'before',
+  after: 'after',
+}));
 
 export const renovationTools = {
   'Outils de coupe': 'Ciseaux, Cutter',

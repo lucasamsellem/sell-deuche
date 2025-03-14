@@ -64,10 +64,13 @@ function AboutSection() {
             Avant / après
           </h3>
           <CarouselContent>
-            {renovatedUpholsteries.map((item, i) => (
-              <CarouselItem className='lg:max-h-[24rem] max-h-[16rem] flex items-center justify-center gap-x-3'>
-                <RenovatedUpholsteryImg condition={item.before} i={i} />
-                <RenovatedUpholsteryImg condition={item.after} i={i} />
+            {renovatedUpholsteries.map(({ before, after }, index) => (
+              <CarouselItem
+                key={index}
+                className='lg:max-h-[24rem] max-h-[16rem] flex items-center justify-center gap-x-3'
+              >
+                <RenovatedUpholsteryImg condition={before} i={index} />
+                <RenovatedUpholsteryImg condition={after} i={index} />
               </CarouselItem>
             ))}
           </CarouselContent>
