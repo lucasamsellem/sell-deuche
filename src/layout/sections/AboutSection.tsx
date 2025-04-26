@@ -1,6 +1,6 @@
-import Section from '../layout/Section';
+import Section from '../Section';
 import { renovatedUpholsteries } from '@/data/upholsteriesData';
-import RenovatedUpholsteryImg from '../upholsteries/RenovatedUpholsteryImg';
+import RenovatedUpholsteryImg from '@/components/upholsteries/RenovatedUpholsteryImg';
 import {
   Carousel,
   CarouselContent,

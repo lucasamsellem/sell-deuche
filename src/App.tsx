@@ -1,15 +1,15 @@
-import Footer from './components/layout/Footer';
-import Navbar from './components/layout/navbar/Navbar';
-import Section from './components/layout/Section';
+import Footer from './layout/Footer';
+import Navbar from './layout/navbar/Navbar';
+import Section from './layout/Section';
 import UpholsteriesList from './components/upholsteries/UpholsteriesList';
-import AboutSection from './components/sections/AboutSection';
-import ContactSection from './components/sections/ContactSection';
+import AboutSection from './layout/sections/AboutSection';
+import ContactSection from './layout/sections/ContactSection';
 import {
   upholsteriesGallery,
   availableUpholsteries,
 } from './data/upholsteriesData';
 import AvailableUpholsteriesHeader from './components/upholsteries/AvailableUpholsteriesHeader';
-import Main from './components/layout/Main';
+import Main from './layout/Main';
 
 function App() {
   return (
