@@ -1,6 +1,6 @@
-import Footer from './components/html-tags/Footer';
-import Navbar from './components/navbar/Navbar';
-import Section from './components/html-tags/Section';
+import Footer from './components/layout/Footer';
+import Navbar from './components/layout/navbar/Navbar';
+import Section from './components/layout/Section';
 import UpholsteriesList from './components/upholsteries/UpholsteriesList';
 import AboutSection from './components/sections/AboutSection';
 import ContactSection from './components/sections/ContactSection';
@@ -9,7 +9,7 @@ import {
   availableUpholsteries,
 } from './data/upholsteriesData';
 import AvailableUpholsteriesHeader from './components/upholsteries/AvailableUpholsteriesHeader';
-import Main from './components/html-tags/Main';
+import Main from './components/layout/Main';
 
 function App() {
   return (

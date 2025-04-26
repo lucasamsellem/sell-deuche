@@ -1,9 +1,9 @@
 export type Upholstery = {
-  model: string
-  material: string
-  year: string
-  details?: string
-}
+  model: string;
+  material: string;
+  year: string;
+  details?: string;
+};
 
 export const upholsteriesGallery: Upholstery[][] = [
   [
@@ -100,45 +100,36 @@ export const upholsteriesGallery: Upholstery[][] = [
       year: '1976',
     },
   ],
-]
+];
 
 export const availableUpholsteries: Upholstery[] = [
-  {
-    model: '2CV SPÉCIAL / CLUB',
-    material: 'Tissu écossais / Skaï',
-    year: '1986/1990',
-  },
   {
     model: '2CV4/6',
     material: 'tissu bleu rayé noir',
     year: '1978/1983',
   },
   {
-    model: '2CV CHARLESTON 2 / DOLLY 1 et 2',
-    material: 'tissu velours gris à coutures losange',
-    year: '1982/1990',
-    details: 'avec option plage arrière Skaï noir',
-  },
-  {
     model: '2CV Spécial',
     material: 'Skaï lisse noir',
     year: '1977/1987',
   },
-]
+];
 
 export const renovatedUpholsteries = Array.from({ length: 6 }, () => ({
   before: 'before',
   after: 'after',
-}))
+}));
 
 export const renovationTools = {
   'Outils de coupe': 'Ciseaux, Cutter',
-  'Outils de vissage et perçage': 'Tournevis (plats et cruciformes), Forêts métaux',
-  'Outils de préhension': 'Pinces (plate, courbée, coupante, à agrafe « nez de porc »)',
+  'Outils de vissage et perçage':
+    'Tournevis (plats et cruciformes), Forêts métaux',
+  'Outils de préhension':
+    'Pinces (plate, courbée, coupante, à agrafe « nez de porc »)',
   'Outils de ponçage et nettoyage':
     'Brosses (à main, rotatives sur perceuse), Papier de verre, Cale à poncer, Pinceau, Vieille brosse à dents',
   'Produits et consommables':
     'Adhésifs (entoilés, TIRO de carrossier), Aérosols (dégraissant, silicone, peinture anticorrosion), Colle Néoprène, Nettoyant Acétone, Feutre noir',
   'Équipements de protection individuelle':
     'Gants anticoupures, Manchettes, Surlunettes de protection',
-}
+};

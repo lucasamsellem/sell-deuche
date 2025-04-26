@@ -1,4 +1,4 @@
-import Section from '../html-tags/Section';
+import Section from '../layout/Section';
 import { IonIcon } from '@ionic/react';
 
 function ContactSection() {
