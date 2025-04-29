@@ -1,9 +1,9 @@
 export type Upholstery = {
-  model: string;
-  material: string;
-  year: string;
-  details?: string;
-};
+  model: string
+  material: string
+  year: string
+  details?: string
+}
 
 export const upholsteriesGallery: Upholstery[][] = [
   [
@@ -99,8 +99,40 @@ export const upholsteriesGallery: Upholstery[][] = [
       material: 'Skaï lisse bleu rayé blanc',
       year: '1976',
     },
+    {
+      model: '2CV6 CHARLESTON / DOLLY',
+      material: 'tissu velours gris à coutures losange',
+      year: '1982/1990',
+      details: 'avec plage arrière optionnelle',
+    },
+    {
+      model: '2CV et DYANE',
+      material: 'tissu beige rayé orange',
+      year: '1979/1984',
+    },
+    {
+      model: '2CV6 CLUB (option sur 2CV Spécial)',
+      material: 'tissu écossais',
+      year: '1986/1990',
+    },
+    {
+      model: '2CV6 et DYANE',
+      material: 'tissu marron rayé',
+      year: '1979/1984',
+    },
+    {
+      model: '2CV6',
+      material: 'Skaï noir aéré / perforé',
+      year: '1983',
+    },
+    {
+      model: 'DYANE 6',
+      material: 'Skaï marron « Caramel » aéré / perforé ',
+      year: '1972',
+      details: 'sellerie sur mesure',
+    },
   ],
-];
+]
 
 export const availableUpholsteries: Upholstery[] = [
   {
@@ -113,23 +145,21 @@ export const availableUpholsteries: Upholstery[] = [
     material: 'Skaï lisse noir',
     year: '1977/1987',
   },
-];
+]
 
 export const renovatedUpholsteries = Array.from({ length: 6 }, () => ({
   before: 'before',
   after: 'after',
-}));
+}))
 
 export const renovationTools = {
   'Outils de coupe': 'Ciseaux, Cutter',
-  'Outils de vissage et perçage':
-    'Tournevis (plats et cruciformes), Forêts métaux',
-  'Outils de préhension':
-    'Pinces (plate, courbée, coupante, à agrafe « nez de porc »)',
+  'Outils de vissage et perçage': 'Tournevis (plats et cruciformes), Forêts métaux',
+  'Outils de préhension': 'Pinces (plate, courbée, coupante, à agrafe « nez de porc »)',
   'Outils de ponçage et nettoyage':
     'Brosses (à main, rotatives sur perceuse), Papier de verre, Cale à poncer, Pinceau, Vieille brosse à dents',
   'Produits et consommables':
     'Adhésifs (entoilés, TIRO de carrossier), Aérosols (dégraissant, silicone, peinture anticorrosion), Colle Néoprène, Nettoyant Acétone, Feutre noir',
   'Équipements de protection individuelle':
     'Gants anticoupures, Manchettes, Surlunettes de protection',
-};
+}
