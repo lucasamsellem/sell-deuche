@@ -101,23 +101,23 @@ export const upholsteriesGallery: Upholstery[][] = [
     },
     {
       model: '2CV6 CHARLESTON / DOLLY',
-      material: 'tissu velours gris à coutures losange',
+      material: 'Tissu velours gris à coutures losange',
       year: '1982/1990',
       details: 'avec plage arrière optionnelle',
     },
     {
       model: '2CV et DYANE',
-      material: 'tissu beige rayé orange',
+      material: 'Tissu beige rayé orange',
       year: '1979/1984',
     },
     {
       model: '2CV6 CLUB (option sur 2CV Spécial)',
-      material: 'tissu écossais',
+      material: 'Tissu écossais',
       year: '1986/1990',
     },
     {
       model: '2CV6 et DYANE',
-      material: 'tissu marron rayé',
+      material: 'Tissu marron rayé',
       year: '1979/1984',
     },
     {
