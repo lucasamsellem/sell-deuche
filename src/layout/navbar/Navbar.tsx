@@ -4,7 +4,7 @@ import { useState } from 'react'
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
+  const toggleMenu = () => setIsMobileMenuOpen(prev => !prev)
 
   return (
     <header className="fixed w-full z-[999] top-0 flex py-2 lg:px-12 px-6 bg-amber-800 justify-between items-center">

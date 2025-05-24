@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/badge'
 import { IonIcon } from '@ionic/react'
 
 function Footer() {
-  const badgesClass = 'lg:text-sm text-xs'
+  const badges = ['Sellerie', 'Restauration', 'Personnalisation', '🇫🇷 Made in France 🇫🇷']
 
   return (
     <footer className="bg-amber-800 text-white text-center space-y-10 p-6">
@@ -12,18 +12,11 @@ function Footer() {
       </header>
 
       <ul id="assets-badges-list" className="flex flex-wrap justify-center gap-x-2 gap-y-4">
-        <li>
-          <Badge className={badgesClass}>Sellerie</Badge>
-        </li>
-        <li>
-          <Badge className={badgesClass}>Restauration</Badge>
-        </li>
-        <li>
-          <Badge className={badgesClass}>Personnalisation</Badge>
-        </li>
-        <li>
-          <Badge className={badgesClass}>🇫🇷 Made in France 🇫🇷</Badge>
-        </li>
+        {badges.map(badge => (
+          <li key={badge}>
+            <Badge className="lg:text-sm text-xs">{badge}</Badge>
+          </li>
+        ))}
       </ul>
 
       <div className="flex flex-col sm:flex-row justify-between items-center sm:px-12">
