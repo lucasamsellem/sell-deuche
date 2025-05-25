@@ -130,14 +130,14 @@ export const upholsteriesGallery: Upholstery[] = [
 
 export const availableUpholsteries: Upholstery[] = [
   {
-    model: '2CV4/6',
-    material: 'tissu bleu rayé noir',
-    year: '1978/1983',
-  },
-  {
     model: '2CV Spécial',
     material: 'Skaï lisse noir',
     year: '1977/1987',
+  },
+  {
+    model: '2CV6 « FRANCE 3 »',
+    material: 'Tissu blanc rayé bleu',
+    year: '1983',
   },
 ]
 
