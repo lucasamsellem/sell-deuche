@@ -12,7 +12,7 @@ function UpholsteriesGalleryList() {
             model={model}
             year={year}
             details={details}
-            available={false}
+            isAvailable={false}
           />
         </li>
       ))}

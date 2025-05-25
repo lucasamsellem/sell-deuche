@@ -21,7 +21,7 @@ function AvailableUpholsteriesList() {
               model={model}
               year={year}
               details={details}
-              available={true}
+              isAvailable={true}
             />
           </li>
         ))}

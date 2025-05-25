@@ -1,11 +1,16 @@
-import NavbarLink from './NavbarLink'
-import { useState } from 'react'
 import { allImages } from '@/utils/getImagePath'
+import NavbarLink from './NavbarLink'
+import useToggle from '@/hooks/useToggle'
 
 function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { isActive: isMobileMenuOpen, toggle: toggleMobileMenu } = useToggle()
 
-  const toggleMenu = () => setIsMobileMenuOpen(prev => !prev)
+  const navLinks = [
+    { link: 'gallery', label: 'Galerie' },
+    { link: 'available-upholsteries', label: 'Selleries' },
+    { link: 'about', label: 'A propos' },
+    { link: 'contact', label: 'Contact' },
+  ]
 
   return (
     <header className="fixed w-full z-[999] top-0 flex py-2 lg:px-12 px-6 bg-amber-800 justify-between items-center">
@@ -16,33 +21,27 @@ function Navbar() {
       />
       <nav className="hidden md:flex ">
         <ul className="flex gap-8">
-          <NavbarLink link="gallery">Galerie</NavbarLink>
-          <NavbarLink link="available-upholsteries">Selleries</NavbarLink>
-          <NavbarLink link="about">A propos</NavbarLink>
-          <NavbarLink link="contact">Contact</NavbarLink>
+          {navLinks.map(({ link, label }) => (
+            <NavbarLink key={link} link={link}>
+              {label}
+            </NavbarLink>
+          ))}
         </ul>
       </nav>
 
       {/* Hamburger Menu for Mobile */}
       <div className="md:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-white text-2xl">
+        <button onClick={toggleMobileMenu} className="text-white text-2xl">
           ☰
         </button>
         {isMobileMenuOpen && (
           <div className="absolute top-18 right-0 bg-amber-800 w-full p-4">
             <ul className="flex items-center justify-center gap-4">
-              <NavbarLink link="gallery" toggleMenu={toggleMenu}>
-                Galerie
-              </NavbarLink>
-              <NavbarLink link="available-upholsteries" toggleMenu={toggleMenu}>
-                Selleries
-              </NavbarLink>
-              <NavbarLink link="about" toggleMenu={toggleMenu}>
-                A propos
-              </NavbarLink>
-              <NavbarLink link="contact" toggleMenu={toggleMenu}>
-                Contact
-              </NavbarLink>
+              {navLinks.map(({ link, label }) => (
+                <NavbarLink key={link} link={link} toggleMobileMenu={toggleMobileMenu}>
+                  {label}
+                </NavbarLink>
+              ))}
             </ul>
           </div>
         )}

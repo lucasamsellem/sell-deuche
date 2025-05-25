@@ -4,8 +4,4 @@ export const allImages = import.meta.glob('/src/assets/**/*.{webp,png,jpg,jpeg}'
   import: 'default',
 })
 
-export function getImagePath(filename: string, isAvailable: boolean) {
-  const folder = isAvailable ? 'available-upholsteries' : 'upholsteries'
-  const key = `/src/assets/${folder}/${filename}.webp`
-  return allImages[key]
-}
+export const getImagePath = (path: string) => allImages[`/src/assets/${path}.webp`] as string

@@ -1,4 +1,4 @@
-export const formatImgPath = (path: string): string => {
+export const formatImgName = (path: string): string => {
   return path
     .toLowerCase()
     .replace(/\//g, '') // Remove all forward slashes

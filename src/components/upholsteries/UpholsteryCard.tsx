@@ -1,24 +1,25 @@
 import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter'
 import { Badge } from '../ui/badge'
-import { formatImgPath } from '@/utils/formatImgPath'
+import { formatImgName } from '@/utils/formatImgName'
 import { getImagePath } from '@/utils/getImagePath'
 
 type UpholsteryCardProps = {
-  available: boolean
+  isAvailable: boolean
   material: string
   model: string
   year: string
   details?: string
 }
 
-function UpholsteryCard({ available, material, model, year, details }: UpholsteryCardProps) {
-  const formattedImgPath = formatImgPath(material)
-  console.log(formattedImgPath)
+function UpholsteryCard({ isAvailable, material, model, year, details }: UpholsteryCardProps) {
+  const formattedImgName = formatImgName(material)
+  const folderPath = isAvailable ? 'available-upholsteries/' : 'upholsteries/'
+  const formattedImgPath = getImagePath(folderPath + formattedImgName)
 
   return (
     <div className="lg:w-[28rem] w-[14rem] relative shadow my-5 rounded-lg">
       <img
-        src={getImagePath(formattedImgPath, available) as string}
+        src={formattedImgPath}
         alt={`Sellerie en ${material}, modèle ${model}, année ${year}`}
         className="rounded-t-lg w-full"
       />
