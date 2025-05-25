@@ -1,5 +1,5 @@
 // Chargement dynamique de toutes les images .webp dans assets
-const allImages = import.meta.glob('/src/assets/**/*.{webp,png,jpg,jpeg}', {
+export const allImages = import.meta.glob('/src/assets/**/*.{webp,png,jpg,jpeg}', {
   eager: true,
   import: 'default',
 })

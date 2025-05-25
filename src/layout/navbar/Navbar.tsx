@@ -1,5 +1,6 @@
 import NavbarLink from './NavbarLink'
 import { useState } from 'react'
+import { allImages } from '@/utils/getImagePath'
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -9,7 +10,7 @@ function Navbar() {
   return (
     <header className="fixed w-full z-[999] top-0 flex py-2 lg:px-12 px-6 bg-amber-800 justify-between items-center">
       <img
-        src="/src/assets/logos/logo-trimmed.jpeg"
+        src={allImages['/src/assets/logos/logo-trimmed.jpeg'] as string}
         alt="Logo Sell Deuche"
         className="bg-white p-1 rounded-lg lg:w-[8rem] w-[6rem]"
       />

@@ -18,7 +18,7 @@ function UpholsteryCard({ available, material, model, year, details }: Upholster
   return (
     <div className="lg:w-[28rem] w-[14rem] relative shadow my-5 rounded-lg">
       <img
-        src={getImagePath(formattedImgPath, available)}
+        src={getImagePath(formattedImgPath, available) as string}
         alt={`Sellerie en ${material}, modèle ${model}, année ${year}`}
         className="rounded-t-lg w-full"
       />
