@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <header className="fixed w-full z-[999] top-0 flex py-2 lg:px-12 px-6 bg-amber-800 justify-between items-center">
       <img
-        src="logos/logo-trimmed.jpeg"
+        src="/src/assets/logos/logo-trimmed.jpeg"
         alt="Logo Sell Deuche"
         className="bg-white p-1 rounded-lg lg:w-[8rem] w-[6rem]"
       />
