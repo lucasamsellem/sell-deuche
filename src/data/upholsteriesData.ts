@@ -134,11 +134,11 @@ export const availableUpholsteries: Upholstery[] = [
     material: 'Skaï lisse noir',
     year: '1977/1987',
   },
-  {
-    model: '2CV6 « FRANCE 3 »',
-    material: 'Tissu blanc rayé bleu',
-    year: '1983',
-  },
+  // {
+  //   model: '2CV6 « FRANCE 3 »',
+  //   material: 'Tissu blanc rayé bleu',
+  //   year: '1983',
+  // },
 ]
 
 export const renovatedUpholsteries = Array.from({ length: 7 }, () => ({
