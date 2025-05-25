@@ -76,7 +76,11 @@ function AboutSection() {
         <SubsectionTitle>Outils</SubsectionTitle>
         <Accordion type="single" collapsible>
           {Object.entries(renovationTools).map(([toolCategory, tools]) => (
-            <AccordionItem value={toolCategory} className="lg:text-[1rem] text-sm">
+            <AccordionItem
+              key={toolCategory}
+              value={toolCategory}
+              className="lg:text-[1rem] text-sm"
+            >
               <AccordionTrigger>{toolCategory}</AccordionTrigger>
               <AccordionContent className="lg:text-[0.9rem] text-xs">{tools}</AccordionContent>
             </AccordionItem>

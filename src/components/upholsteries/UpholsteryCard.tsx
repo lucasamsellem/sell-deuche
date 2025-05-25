@@ -12,11 +12,12 @@ type UpholsteryCardProps = {
 
 function UpholsteryCard({ available, material, model, year, details }: UpholsteryCardProps) {
   const formattedImgPath = formatImgPath(material)
+  console.log(formattedImgPath)
 
   return (
     <div className="lg:w-[28rem] w-[14rem] relative shadow my-5 rounded-lg">
       <img
-        src={`${available ? 'available-upholsteries/' : 'upholsteries/'}${formattedImgPath}.webp`}
+        src={`/${available ? 'available-upholsteries/' : 'upholsteries/'}${formattedImgPath}.webp`}
         alt={`Sellerie en ${material}, modèle ${model}, année ${year}`}
         className="rounded-t-lg w-full"
       />
