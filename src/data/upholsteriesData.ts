@@ -1,9 +1,9 @@
 export type Upholstery = {
-  model: string
-  material: string
-  year: string
-  details?: string
-}
+  model: string;
+  material: string;
+  year: string;
+  details?: string;
+};
 
 export const upholsteriesGallery: Upholstery[] = [
   {
@@ -126,7 +126,7 @@ export const upholsteriesGallery: Upholstery[] = [
     year: '1972',
     details: 'sellerie sur mesure',
   },
-]
+];
 
 export const availableUpholsteries: Upholstery[] = [
   {
@@ -139,12 +139,22 @@ export const availableUpholsteries: Upholstery[] = [
     material: 'Tissu blanc rayé bleu',
     year: '1983',
   },
-]
+  {
+    model: '2CV / DYANE',
+    material: 'tissu losange rouge / noir',
+    year: '1978',
+  },
+  {
+    model: 'AMI6 break',
+    material: 'tissu Armuré rouge',
+    year: '1967',
+  },
+];
 
 export const renovatedUpholsteries = Array.from({ length: 7 }, () => ({
   before: 'before',
   after: 'after',
-}))
+}));
 
 export const renovationTools = {
   'Outils de coupe': 'Ciseaux, Cutter',
@@ -156,4 +166,4 @@ export const renovationTools = {
     'Adhésifs (entoilés, TIRO de carrossier), Aérosols (dégraissant, silicone, peinture anticorrosion), Colle Néoprène, Nettoyant Acétone, Feutre noir',
   'Équipements de protection individuelle':
     'Gants anticoupures, Manchettes, Surlunettes de protection',
-}
+};
