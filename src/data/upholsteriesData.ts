@@ -95,12 +95,6 @@ export const upholsteriesGallery: Upholstery[] = [
     year: '1976',
   },
   {
-    model: '2CV6 CHARLESTON / DOLLY',
-    material: 'Tissu velours gris à coutures losange',
-    year: '1982/1990',
-    details: 'avec plage arrière optionnelle',
-  },
-  {
     model: '2CV et DYANE',
     material: 'Tissu beige rayé orange',
     year: '1979/1984',
@@ -126,6 +120,11 @@ export const upholsteriesGallery: Upholstery[] = [
     year: '1972',
     details: 'sellerie sur mesure',
   },
+  {
+    model: '2CV6 « FRANCE 3 »',
+    material: 'Tissu blanc rayé bleu',
+    year: '1983',
+  },
 ];
 
 export const availableUpholsteries: Upholstery[] = [
@@ -135,19 +134,22 @@ export const availableUpholsteries: Upholstery[] = [
     year: '1977/1987',
   },
   {
-    model: '2CV6 « FRANCE 3 »',
-    material: 'Tissu blanc rayé bleu',
-    year: '1983',
-  },
-  {
     model: '2CV / DYANE',
     material: 'tissu losange rouge / noir',
     year: '1978',
+    details: 'Sellerie occasion',
   },
   {
     model: 'AMI6 break',
     material: 'tissu Armuré rouge',
     year: '1967',
+    details: 'Sellerie occasion',
+  },
+  {
+    model: '2CV6 CHARLESTON / DOLLY',
+    material: 'Tissu velours gris à coutures losange',
+    year: '1982/1990',
+    details: 'avec plage arrière optionnelle',
   },
 ];
 
