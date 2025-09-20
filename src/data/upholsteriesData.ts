@@ -7,6 +7,17 @@ export type Upholstery = {
 
 export const upholsteriesGallery: Upholstery[] = [
   {
+    model: '2CV A/AZ/AZLP',
+    material: 'tissu Bayadère bleu rayé',
+    year: '1957/1969',
+  },
+  {
+    model: 'DYANE Luxe',
+    material: 'tissu rouge diamanté',
+    year: '1969',
+    details: 'Sellerie sur mesure',
+  },
+  {
     model: '2CV6 Club',
     material: 'Tissu beige rayé rouge',
     year: '1981',
@@ -129,9 +140,20 @@ export const upholsteriesGallery: Upholstery[] = [
 
 export const availableUpholsteries: Upholstery[] = [
   {
-    model: '2CV Spécial',
-    material: 'Skaï lisse noir',
-    year: '1977/1987',
+    model: '2CV A/AZ/AZLP',
+    material: 'tissu Bayadère rouge rayé',
+    year: '1957/1969',
+  },
+  {
+    model: '2CV6 Club (option sur 2CV6 Spécial)',
+    material: 'tissu écossais',
+    year: '1986/1990',
+  },
+  {
+    model: '2CV4/6',
+    material: 'Skaï simili blanc rayé jaune',
+    year: '1970/1990',
+    details: 'Avec option plage arrière assortie',
   },
   {
     model: '2CV / DYANE',
@@ -145,15 +167,9 @@ export const availableUpholsteries: Upholstery[] = [
     year: '1967',
     details: 'Sellerie occasion',
   },
-  {
-    model: '2CV6 CHARLESTON / DOLLY',
-    material: 'Tissu velours gris à coutures losange',
-    year: '1982/1990',
-    details: 'avec plage arrière optionnelle',
-  },
 ];
 
-export const renovatedUpholsteries = Array.from({ length: 7 }, () => ({
+export const renovatedUpholsteries = Array.from({ length: 8 }, () => ({
   before: 'before',
   after: 'after',
 }));

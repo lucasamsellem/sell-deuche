@@ -1,12 +1,15 @@
-import { upholsteriesGallery } from '@/data/upholsteriesData'
-import UpholsteryCard from './UpholsteryCard'
-import ScrollableListWrapper from './ScrollableListWrapper'
+import { upholsteriesGallery } from '@/data/upholsteriesData';
+import UpholsteryCard from './UpholsteryCard';
+import ScrollableListWrapper from './ScrollableListWrapper';
+import splitArrayIntoChunks from '@/utils/splitArrayIntoChunks';
 
 function UpholsteriesGalleryList() {
-  return (
+  const lists = splitArrayIntoChunks(upholsteriesGallery, 3);
+
+  return lists.map((list, colIndex) => (
     <ScrollableListWrapper>
-      {upholsteriesGallery.map(({ material, model, year, details }, index) => (
-        <li key={`gallery-${index}`}>
+      {list.map(({ material, model, year, details }, index) => (
+        <li key={`gallery-${colIndex}-${index}`}>
           <UpholsteryCard
             material={material}
             model={model}
@@ -17,7 +20,7 @@ function UpholsteriesGalleryList() {
         </li>
       ))}
     </ScrollableListWrapper>
-  )
+  ));
 }
 
-export default UpholsteriesGalleryList
+export default UpholsteriesGalleryList;
