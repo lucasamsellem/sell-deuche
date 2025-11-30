@@ -7,6 +7,17 @@ export type Upholstery = {
 
 export const upholsteriesGallery: Upholstery[] = [
   {
+    model: 'AMI6 berline',
+    material: 'Skaï lisse rouge',
+    year: '1962',
+  },
+  {
+    model: '2CV4',
+    material: 'tissu velours beige / Skaï marron',
+    year: '1976',
+    details: 'Sellerie sur mesure',
+  },
+  {
     model: '2CV A/AZ/AZLP',
     material: 'tissu Bayadère bleu rayé',
     year: '1957/1969',
@@ -140,6 +151,11 @@ export const upholsteriesGallery: Upholstery[] = [
 
 export const availableUpholsteries: Upholstery[] = [
   {
+    model: '2CV / DYANE',
+    material: 'Skaï noir rayé blanc',
+    year: '1970/1990',
+  },
+  {
     model: '2CV A/AZ/AZLP',
     material: 'tissu Bayadère rouge rayé',
     year: '1957/1969',
@@ -150,21 +166,9 @@ export const availableUpholsteries: Upholstery[] = [
     year: '1986/1990',
   },
   {
-    model: '2CV4/6',
-    material: 'Skaï simili blanc rayé jaune',
-    year: '1970/1990',
-    details: 'Avec option plage arrière assortie',
-  },
-  {
     model: '2CV / DYANE',
     material: 'tissu losange rouge / noir',
     year: '1978',
-    details: 'Sellerie occasion',
-  },
-  {
-    model: 'AMI6 break',
-    material: 'tissu Armuré rouge',
-    year: '1967',
     details: 'Sellerie occasion',
   },
 ];

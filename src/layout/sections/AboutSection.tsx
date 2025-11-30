@@ -19,8 +19,6 @@ import { renovationTools } from '@/data/upholsteriesData';
 import Subsection from './Subsection';
 
 function AboutSection() {
-  const carouselBtnsVariant = 'secondary';
-
   return (
     <Section sectionId='about' sectionTitle='A propos'>
       <Subsection>
@@ -67,8 +65,8 @@ function AboutSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious variant={carouselBtnsVariant} />
-          <CarouselNext variant={carouselBtnsVariant} />
+          <CarouselPrevious variant='secondary' />
+          <CarouselNext variant='secondary' />
         </Carousel>
       </Subsection>
 
