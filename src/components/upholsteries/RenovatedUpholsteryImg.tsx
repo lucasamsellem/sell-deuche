@@ -6,12 +6,9 @@ type RenovatedUpholsteryImgProps = {
 };
 
 function RenovatedUpholsteryImg({ condition, i }: RenovatedUpholsteryImgProps) {
-  return (
-    <img
-      src={getImagePath(`before-after-upholsteries/${i + 1}-${condition}`)}
-      className='object-scale-down lg:max-h-full lg:max-w-full max-h-[6.5rem] rounded-lg'
-    />
-  );
+  const imgPath = getImagePath(`before-after-upholsteries/${i + 1}-${condition}`);
+
+  return <img src={imgPath} className='object-cover w-1/2' />;
 }
 
 export default RenovatedUpholsteryImg;

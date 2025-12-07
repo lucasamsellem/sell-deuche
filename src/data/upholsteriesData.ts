@@ -173,7 +173,7 @@ export const availableUpholsteries: Upholstery[] = [
   },
 ];
 
-export const renovatedUpholsteries = Array.from({ length: 8 }, () => ({
+export const renovatedUpholsteries = Array.from({ length: 10 }, () => ({
   before: 'before',
   after: 'after',
 }));

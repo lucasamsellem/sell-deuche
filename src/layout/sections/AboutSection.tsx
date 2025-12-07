@@ -2,14 +2,6 @@ import Section from '../Section';
 import { renovatedUpholsteries } from '@/data/upholsteriesData';
 import RenovatedUpholsteryImg from '@/components/upholsteries/RenovatedUpholsteryImg';
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-import SubsectionTitle from './SubsectionTitle';
-import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -21,8 +13,7 @@ import Subsection from './Subsection';
 function AboutSection() {
   return (
     <Section sectionId='about' sectionTitle='A propos'>
-      <Subsection>
-        <SubsectionTitle>Genèse</SubsectionTitle>
+      <Subsection title='Genèse'>
         <article className='lg:text-lg text-xs font-medium space-y-6 leading-6 text-justify'>
           <p>
             La toute récente histoire de SELL-DEUCHE-77 puise ses racines dans ma démarche de
@@ -50,28 +41,18 @@ function AboutSection() {
         </article>
       </Subsection>
 
-      <Subsection>
-        <SubsectionTitle>Restauration</SubsectionTitle>
-        <Carousel className='w-[95%] rounded-lg p-4 mx-auto border-1 border-black/20'>
-          <h3 className='lg:text-xl text-md text-center font-bold mb-5'>Avant / après</h3>
-          <CarouselContent>
-            {renovatedUpholsteries.map(({ before, after }, index) => (
-              <CarouselItem
-                key={index}
-                className='lg:max-h-[20rem]  max-h-[16rem] flex items-center justify-center gap-x-3'
-              >
-                <RenovatedUpholsteryImg condition={before} i={index} />
-                <RenovatedUpholsteryImg condition={after} i={index} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious variant='secondary' />
-          <CarouselNext variant='secondary' />
-        </Carousel>
+      <Subsection title='Restauration'>
+        <ul className='rounded-xl overflow-hidden'>
+          {renovatedUpholsteries.map(({ before, after }, index) => (
+            <li key={index} className='flex w-full'>
+              <RenovatedUpholsteryImg condition={before} i={index} />
+              <RenovatedUpholsteryImg condition={after} i={index} />
+            </li>
+          ))}
+        </ul>
       </Subsection>
 
-      <Subsection>
-        <SubsectionTitle>Outils</SubsectionTitle>
+      <Subsection title='Outils'>
         <Accordion type='single' collapsible>
           {Object.entries(renovationTools).map(([toolCategory, tools]) => (
             <AccordionItem
