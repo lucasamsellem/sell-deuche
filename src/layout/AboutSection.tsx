@@ -1,4 +1,4 @@
-import Section from '../Section';
+import Section from './Section';
 import { renovatedUpholsteries } from '@/data/upholsteriesData';
 import RenovatedUpholsteryImg from '@/components/upholsteries/RenovatedUpholsteryImg';
 import {
@@ -12,7 +12,7 @@ import Subsection from './Subsection';
 
 function AboutSection() {
   return (
-    <Section sectionId='about' sectionTitle='A propos'>
+    <Section id='about' title='A propos'>
       <Subsection title='Genèse'>
         <article className='lg:text-lg text-xs font-medium space-y-6 leading-6 text-justify'>
           <p>

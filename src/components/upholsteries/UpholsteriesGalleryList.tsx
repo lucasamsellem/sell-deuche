@@ -11,6 +11,7 @@ function UpholsteriesGalleryList() {
       {list.map(({ material, model, year, details }, index) => (
         <li key={`gallery-${colIndex}-${index}`}>
           <UpholsteryCard
+            key={`gallery-${colIndex}-${index}`}
             material={material}
             model={model}
             year={year}

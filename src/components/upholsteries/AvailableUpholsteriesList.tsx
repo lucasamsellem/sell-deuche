@@ -1,16 +1,16 @@
-import { availableUpholsteries } from '@/data/upholsteriesData'
-import UpholsteryCard from './UpholsteryCard'
-import { Badge } from '../ui/badge'
-import ScrollableListWrapper from './ScrollableListWrapper'
+import { availableUpholsteries } from '@/data/upholsteriesData';
+import UpholsteryCard from './UpholsteryCard';
+import { Badge } from '../ui/badge';
+import ScrollableListWrapper from './ScrollableListWrapper';
+
+const BADGE_CLASSES = 'lg:text-sm text-[0.65rem]';
 
 function AvailableUpholsteriesList() {
-  const badgeClasses = 'lg:text-sm text-[0.65rem]'
-
   return (
     <>
-      <header className="flex justify-between">
-        <Badge className={badgeClasses}>Tarif sur demande</Badge>
-        <Badge className={badgeClasses}>Autres modèles sur commande</Badge>
+      <header className='flex justify-between'>
+        <Badge className={BADGE_CLASSES}>Tarif sur demande</Badge>
+        <Badge className={BADGE_CLASSES}>Autres modèles sur commande</Badge>
       </header>
 
       <ScrollableListWrapper>
@@ -27,7 +27,7 @@ function AvailableUpholsteriesList() {
         ))}
       </ScrollableListWrapper>
     </>
-  )
+  );
 }
 
-export default AvailableUpholsteriesList
+export default AvailableUpholsteriesList;

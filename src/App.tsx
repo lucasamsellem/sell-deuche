@@ -1,31 +1,33 @@
-import Footer from './layout/Footer'
-import Navbar from './layout/navbar/Navbar'
-import Section from './layout/Section'
-import AboutSection from './layout/sections/AboutSection'
-import ContactSection from './layout/sections/ContactSection'
-import Main from './layout/Main'
-import AvailableUpholsteriesList from './components/upholsteries/AvailableUpholsteriesList'
-import UpholsteriesGalleryList from './components/upholsteries/UpholsteriesGalleryList'
+import Footer from './layout/Footer';
+import Section from './layout/Section';
+import AboutSection from './layout/AboutSection';
+import ContactSection from './layout/ContactSection';
+import AvailableUpholsteriesList from './components/upholsteries/AvailableUpholsteriesList';
+import UpholsteriesGalleryList from './components/upholsteries/UpholsteriesGalleryList';
+import Header from './layout/Header';
 
 function App() {
   return (
-    <div className="tracking-wider">
-      <Navbar />
+    <div className='tracking-wider'>
+      <Header />
 
-      <Main>
-        <Section sectionId="gallery" sectionTitle="Galerie">
+      <main className='max-w-[90rem] mx-auto lg:p-8 p-4'>
+        <Section id='gallery' title='Galerie'>
           <UpholsteriesGalleryList />
         </Section>
-        <Section sectionId="available-upholsteries" sectionTitle="Selleries disponibles">
+
+        <Section id='available-upholsteries' title='Selleries disponibles'>
           <AvailableUpholsteriesList />
         </Section>
+
         <AboutSection />
+
         <ContactSection />
-      </Main>
+      </main>
 
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
