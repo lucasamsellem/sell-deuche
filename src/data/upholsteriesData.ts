@@ -1,9 +1,9 @@
 export type Upholstery = {
-  model: string;
-  material: string;
-  year: string;
-  details?: string;
-};
+  model: string
+  material: string
+  year: string
+  details?: string
+}
 
 export const upholsteriesGallery: Upholstery[] = [
   {
@@ -147,36 +147,30 @@ export const upholsteriesGallery: Upholstery[] = [
     material: 'Tissu blanc rayé bleu',
     year: '1983',
   },
-];
+]
 
 export const availableUpholsteries: Upholstery[] = [
   {
-    model: '2CV / DYANE',
-    material: 'Skaï noir rayé blanc',
-    year: '1970/1990',
-  },
-  {
-    model: '2CV A/AZ/AZLP',
-    material: 'tissu Bayadère rouge rayé',
+    model: '2CV A / AZ / AZLP',
+    material: 'Tissu Bayadère bleu rayé',
     year: '1957/1969',
   },
   {
-    model: '2CV6 Club (option sur 2CV6 Spécial)',
-    material: 'tissu écossais',
-    year: '1986/1990',
+    model: '2CV4/6',
+    material: 'Tissu orange rayé noir',
+    year: '1978/1985',
   },
   {
-    model: '2CV / DYANE',
-    material: 'tissu losange rouge / noir',
-    year: '1978',
-    details: 'Sellerie occasion',
+    model: '2CV4/6',
+    material: 'Tissu beige rayé orange',
+    year: '1978/1985',
   },
-];
+]
 
 export const renovatedUpholsteries = Array.from({ length: 10 }, () => ({
   before: 'before',
   after: 'after',
-}));
+}))
 
 export const renovationTools = {
   'Outils de coupe': 'Ciseaux, Cutter',
@@ -188,4 +182,4 @@ export const renovationTools = {
     'Adhésifs (entoilés, TIRO de carrossier), Aérosols (dégraissant, silicone, peinture anticorrosion), Colle Néoprène, Nettoyant Acétone, Feutre noir',
   'Équipements de protection individuelle':
     'Gants anticoupures, Manchettes, Surlunettes de protection',
-};
+}
