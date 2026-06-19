@@ -1,9 +1,9 @@
 export type Upholstery = {
-  model: string
-  material: string
-  year: string
-  details?: string
-}
+  model: string;
+  material: string;
+  year: string;
+  details?: string;
+};
 
 export const upholsteriesGallery: Upholstery[] = [
   {
@@ -147,7 +147,7 @@ export const upholsteriesGallery: Upholstery[] = [
     material: 'Tissu blanc rayé bleu',
     year: '1983',
   },
-]
+];
 
 export const availableUpholsteries: Upholstery[] = [
   {
@@ -156,21 +156,26 @@ export const availableUpholsteries: Upholstery[] = [
     year: '1957/1969',
   },
   {
-    model: '2CV4/6',
-    material: 'Tissu orange rayé noir',
-    year: '1978/1985',
+    model: '2CV Export « Allemagne »',
+    material: 'tissu écossais / Skaï gris',
+    year: '1984/1990',
   },
   {
-    model: '2CV4/6',
-    material: 'Tissu beige rayé orange',
-    year: '1978/1985',
+    model: '2CV FRANCE 3',
+    material: 'tissu blanc rayé bleu / Skaï bleu',
+    year: '1983',
   },
-]
+  {
+    model: '2CV / DYANE',
+    material: 'Skaï aéré / perforé noir',
+    year: '1970/1990',
+  },
+];
 
 export const renovatedUpholsteries = Array.from({ length: 10 }, () => ({
   before: 'before',
   after: 'after',
-}))
+}));
 
 export const renovationTools = {
   'Outils de coupe': 'Ciseaux, Cutter',
@@ -182,4 +187,4 @@ export const renovationTools = {
     'Adhésifs (entoilés, TIRO de carrossier), Aérosols (dégraissant, silicone, peinture anticorrosion), Colle Néoprène, Nettoyant Acétone, Feutre noir',
   'Équipements de protection individuelle':
     'Gants anticoupures, Manchettes, Surlunettes de protection',
-}
+};
