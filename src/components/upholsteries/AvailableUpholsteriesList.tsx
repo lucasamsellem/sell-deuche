@@ -14,17 +14,21 @@ function AvailableUpholsteriesList() {
       </header>
 
       <ScrollableListWrapper>
-        {availableUpholsteries.map(({ material, model, year, details }, index) => (
-          <li key={`available-${index}`}>
-            <UpholsteryCard
-              material={material}
-              model={model}
-              year={year}
-              details={details}
-              isAvailable={true}
-            />
-          </li>
-        ))}
+        {availableUpholsteries.map(
+          ({ material, model, year, details, isKit, kitDetails }, index) => (
+            <li key={`available-${index}`}>
+              <UpholsteryCard
+                material={material}
+                model={model}
+                year={year}
+                details={details}
+                isKit={isKit}
+                kitDetails={kitDetails}
+                isAvailable={true}
+              />
+            </li>
+          ),
+        )}
       </ScrollableListWrapper>
     </>
   );

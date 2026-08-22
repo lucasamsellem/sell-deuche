@@ -3,6 +3,8 @@ export type Upholstery = {
   material: string;
   year: string;
   details?: string;
+  isKit?: boolean;
+  kitDetails?: string;
 };
 
 export const upholsteriesGallery: Upholstery[] = [
@@ -182,6 +184,8 @@ export const availableUpholsteries: Upholstery[] = [
     material: 'tissu bleu rayé',
     year: '1978/1983',
     details: 'plage AR optionnelle',
+    isKit: true,
+    kitDetails: 'Panneaux de portes spécifiques sur-mesure',
   },
 ];
 
