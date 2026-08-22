@@ -7,6 +7,16 @@ export type Upholstery = {
 
 export const upholsteriesGallery: Upholstery[] = [
   {
+    model: '2CV Export « Allemagne »',
+    material: 'tissu écossais / Skaï gris',
+    year: '1984/1990',
+  },
+  {
+    model: '2CV FRANCE 3',
+    material: 'tissu blanc rayé bleu / Skaï bleu',
+    year: '1983',
+  },
+  {
     model: 'AMI6 berline',
     material: 'Skaï lisse rouge',
     year: '1962',
@@ -156,19 +166,22 @@ export const availableUpholsteries: Upholstery[] = [
     year: '1957/1969',
   },
   {
-    model: '2CV Export « Allemagne »',
-    material: 'tissu écossais / Skaï gris',
-    year: '1984/1990',
+    model: ' 2CV CHARLESTON et DOLLY',
+    material: 'tissu velours gris à coutures losange',
+    year: '1982/1990',
+    details: 'plage AR optionnelle',
   },
   {
-    model: '2CV FRANCE 3',
-    material: 'tissu blanc rayé bleu / Skaï bleu',
-    year: '1983',
+    model: '2CV4/6',
+    material: 'tissu orange rayé',
+    year: '1978/1983',
+    details: 'plage AR optionnelle',
   },
   {
-    model: '2CV / DYANE',
-    material: 'Skaï aéré / perforé noir',
-    year: '1970/1990',
+    model: '2CV4/6',
+    material: 'tissu bleu rayé',
+    year: '1978/1983',
+    details: 'plage AR optionnelle',
   },
 ];
 
