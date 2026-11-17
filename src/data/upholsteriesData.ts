@@ -163,6 +163,21 @@ export const upholsteriesGallery: Upholstery[] = [
 
 export const availableUpholsteries: Upholstery[] = [
   {
+    model: 'AMI 6 break CLUB',
+    material: 'tissu diamanté + simili rouges',
+    year: '1968',
+  },
+  {
+    model: '2CV et DYANE',
+    material: 'simili coquille d’œuf',
+    year: '1977/1990',
+  },
+  {
+    model: 'CITROËN C15',
+    material: 'tissu gris et rouge + simili gris',
+    year: '1984/2006',
+  },
+  {
     model: '2CV A / AZ / AZLP',
     material: 'Tissu Bayadère bleu rayé',
     year: '1957/1969',
