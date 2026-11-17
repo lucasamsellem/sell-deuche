@@ -204,7 +204,7 @@ export const availableUpholsteries: Upholstery[] = [
   },
 ];
 
-export const renovatedUpholsteries = Array.from({ length: 10 }, () => ({
+export const renovatedUpholsteries = Array.from({ length: 11 }, () => ({
   before: 'before',
   after: 'after',
 }));
